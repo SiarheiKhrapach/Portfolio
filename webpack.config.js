@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtnlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const devServer = (isDev) => !isDev ? {} : {
@@ -12,14 +12,15 @@ const devServer = (isDev) => !isDev ? {} : {
 
 module.exports = ({develop}) => ({
     mode: develop ? 'development' : 'production',
-  entry: './src/index.js',
-  output: {
+    entry: './src/index.js',
+    output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     clean: true,
+
   },
   plugins: [
-    new HtmlWebpackPlugin({
+    new HtnlWebpackPlugin({
         template: './src/index.html'
     }),
     new MiniCssExtractPlugin({
@@ -29,12 +30,12 @@ module.exports = ({develop}) => ({
   module: {
     rules: [
         {
-            test: /\.(png|svg|jpg|jpeg)$/i,
-            type: 'asset/inline',
+            test: /\.(?:icon|png|svg|jpg|jpeg)$/i,
+            type: 'asset/inline'
           },
           {
             test: /\.html$/i,
-            loader: 'html-loader',
+            loader: "html-loader"
           },
           {
             test: /\.css$/i,
