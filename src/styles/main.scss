@@ -1,5 +1,7 @@
+@import 'fonts';
+
+$font: "Inter", serif;
 
 body {
-    font-family: "Inter", serif;
-    font-weight: 600;
+    font-family: $font;
 }
