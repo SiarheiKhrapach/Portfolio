@@ -13,6 +13,7 @@ $font: "Inter", serif;
 body {
     max-width: 1920px;
     background-color: $dark;
+    font-family: "Inter", serif;
 }
 
 a {
@@ -59,7 +60,7 @@ a {
     }
     &__separator {
         width: 1px;
-        height: 20px;
+        height: 24px;
         background-color: $gray;
         margin: 0 10px;
     }
@@ -116,6 +117,8 @@ a {
     &__social-info {
         display: flex;
         justify-content: space-between;
+        border-bottom: 1px solid;
+        padding-bottom: 60px;
     }
     &__additionall {
         display: flex;
@@ -140,5 +143,39 @@ a {
     }
     &__discussion:hover::after {
         background-color: $gray;
+    }
+    &__social {
+        display: flex;
+        gap: 48px;
+        position: relative;
+        z-index: 9999;
+    }
+    &__social-link {
+        color: $gray;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        position: relative;
+    }
+    &__social-link:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 24px;
+        background-color: $gray;
+        margin: 0 24px;
+    }
+    &__social-link:hover {
+        color: $red;
+        transition: $tr;
+    }
+    &__ellipse {
+        left: 98px;
+        top: -40px;
+        position: absolute;
+        height: 106px;
+        width: 106px;
+        background-image: url(../images/objects/ellipse.png);
+        z-index: -1;
     }
 }
