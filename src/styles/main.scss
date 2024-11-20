@@ -283,8 +283,28 @@ a {
         border-top: 1px $light solid;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        gap: 217px;
         }
+        &__grid-vertical:nth-child(2) {
+            gap: 198px;
+        }
+        &__grid-vertical:nth-child(3) {
+            gap: 164px;
+        }
+        &__grid-vertical:last-child {
+            border-bottom: 1px $gray solid;
+        }
+    &__number-stage {
+        display: flex;
+        gap: 43px;
+    }
+    &__number {
+        color: $gray;
+        margin-top: 30px;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 150%; 
+    }    
     &__stage {
         color: $gray;
         margin-top: 30px;
@@ -298,6 +318,30 @@ a {
         font-weight: 400;
         line-height: 150%;
         opacity: 0.8;
+    }
+}
+
+.section {
+    &__section-portfolio {
+
+    }
+    &__portfolio-txt {
+        margin-top: 180px;
+        color: $light;
+        font-size: 74px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__red-circle {
+        content: "";
+        width: 465px;
+        height: 465px;
+        right: 623px;
+        margin-top: -159px;
+        border-radius: 100%;
+        display: block;
+        background-color: $red;
+        z-index: -1;
     }
 }
 
