@@ -420,5 +420,15 @@ ul li::before {
         line-height: 150%;
         padding-bottom: 80px;
         padding-right: 270px;
+        margin-bottom: 0;
+    }
+    &__grid-dist-info {
+        margin-top: 80px;
+        width: 294px;
+        height: 71px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
     }
 }
