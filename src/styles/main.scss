@@ -407,7 +407,7 @@ ul li::before {
         background: linear-gradient(180deg, rgb(20, 20, 22), rgba(20, 20, 22, 0) 100%);
         z-index: -2;
     }
-    &__portfolio-link:nth-last-child(2) {
+    &__portfolio-link:nth-child(2) {
         margin-top: 60px;
     }
     &__myself-txt {
@@ -422,13 +422,79 @@ ul li::before {
         padding-right: 270px;
         margin-bottom: 0;
     }
-    &__grid-dist-info {
+    &__grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 6fr);;
+    }
+    &__grid-box {
         margin-top: 80px;
-        width: 294px;
-        height: 71px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
         gap: 40px;
+        width: 294px;
+        height: 71px;
+    }
+    &__grid-txt {
+        color: $light;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
+        margin-top: 0;
+    }
+    &__grid-txt-discription {
+        color: $gray;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+        opacity: 0.8;
+        margin: 0;
+        width: 214px;
+        height: 42px;
+    }
+    &__grid-box:nth-child(2) &__grid-discription p {
+        width: 227px;
+      }
+      &__grid-box:nth-child(3) &__grid-discription p {
+        width: 227px;
+      }
+      &__grid-box:nth-child(5) &__grid-discription p {
+        width: 235px;
+      }
+      &__grid-box:nth-child(6) &__grid-discription p {
+        width: 251px;
+      }
+}
+.section {
+    &__web-grid {
+        margin-top: 180px;
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+    }
+    &__web-box:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+    &__web-box {
+        filter: grayscale(1);
+        width: 286px;
+        height: 148px;
+        box-sizing: border-box;
+        border: 1px solid rgb(243, 242, 240);
+        opacity: 0.5;
+        transition: $tr;
+    }
+    &__web-grid-cntrl {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    &__web-box:nth-child(5) {
+        padding-top: 10px;
+    }
+    &__web-box:nth-child(6) {
+        padding-top: 15px;
+    }
+    &__web-box:nth-child(7) {
+        padding-top: 10px;
     }
 }
