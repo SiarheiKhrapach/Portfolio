@@ -656,7 +656,7 @@ ul li::before {
         justify-content: space-between;
         position: relative;
         border-bottom: 1px solid $gray;
-        padding-bottom: 60px;
+        padding-bottom: 45px;
     }
     &__my-project {
         width: 286px;
@@ -716,5 +716,37 @@ ul li::before {
     }
     &__form-group {
         display: grid;
+    }
+    &__from-contakt {
+        padding-top: 60px;
+        padding-right: 448px;
+        color: $gray;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+    &__phone-mail {
+        color: $gray;
+        padding-right: 448px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+        opacity: 0.8;
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+    &__input-type {
+        width: 560px;
+        height: 65px;
+        margin-top: 10px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 150%;
+        background-color: #575554;
+        opacity: 0.3;
+    }
+    &__input-type::placeholder {
+        padding-left: 20px;
+        color: rgb(255, 255, 255);
     }
 }
