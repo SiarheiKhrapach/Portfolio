@@ -526,3 +526,195 @@ ul li::before {
         padding-right: 15px;
     }
 }
+.section {
+    &__container-tariff-info {
+        margin-top: 180px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $gray;
+        padding-bottom: 80px;
+    }
+    &__tarrif {
+        color: $light;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 150%;
+        position: relative;
+    }
+    &__tarrif-alepce::after {
+        content: "";
+        left: -80px;
+        top: -50px;
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        background-color: #D40000;
+        border-radius: 100%;
+        z-index: -1;
+    }
+    &__tariff-info {
+        color: $light;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 150%;
+        width: 559px;
+        height: 168px;
+        opacity: 0.8;
+    }
+    &__development-container {
+        margin-top: 60px;
+        display: flex;
+        gap: 224px;
+        padding-bottom: 75px;
+        border-bottom: 1px solid $gray;
+    }
+    &__development-txt {
+        color: $gray;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 0;
+    }
+    &__development-paragraph {
+        color: $gray;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 150%;
+        margin-top: 20px;
+        margin-bottom: 70px;
+        opacity: 0.8;
+    }
+    &__development-discussion {
+        color: $gray;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 150%;
+        display: block;
+    }
+    &__development-discussion::after {
+        content:"";
+        display: block;
+        height: 1px;
+        background-color: $gray;
+        background-color: transparent;
+        transition: $tr;
+    }
+    &__development-discussion:hover::after {
+        background-color: $gray;
+    }
+    &__development-arrow {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    &__development-txt-inc {
+        color: $gray;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 150%;
+        opacity: 0.8;
+        margin: 0;
+    }
+    &__development-info {
+        color: $gray;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 200%;
+        opacity: 0.8;
+    }
+    &__development-info li::before {
+        content: "• ";
+    }
+    &__seven {
+        position: relative;
+        color: $light;
+        font-size: 42px;
+        font-weight: 700;
+        line-height: 150%;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+    &__elipse-seven {
+        left: -47px;
+        top: -11px;
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        display: block;
+        background-color: $red;
+        border-radius: 100%;
+        z-index: -1;
+    }
+    &__development-container:nth-child(4) {
+        border-bottom: none;
+    }
+}
+.section {
+    &__my-project-container {
+        margin-top: 115px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        border-bottom: 1px solid $gray;
+        padding-bottom: 60px;
+    }
+    &__my-project {
+        width: 286px;
+        height: 84px;
+        color: $light;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 150%;
+        text-transform: uppercase;
+    }
+    &__circle-tringle {
+        left: -178px;
+        top: 0;
+        width: 328px;
+        height: 300px;
+        position: absolute;
+        background-image: url(../images/objects/elipse-tringle.png);
+        z-index: -2;
+    }
+    &__my-project-txt {
+        width: 483px;
+        height: 168px;
+        color: $gray;
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 150%;
+        opacity: 0.8;
+        margin-right: 77px;
+    }
+    &__form-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__social-section {
+        display: flex;
+        gap: 48px;
+        padding-top: 247px;
+    }
+    &__social-link {
+        color: $gray;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        position: relative;
+    }
+    &__social-link:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 24px;
+        background-color: $gray;
+        margin: 0 24px;
+    }
+    &__social-link:hover {
+        color: $red;
+        transition: $tr;
+    }
+    &__form-group {
+        display: grid;
+    }
+}
