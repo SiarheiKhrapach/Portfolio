@@ -470,18 +470,18 @@ ul li::before {
         display: grid;
         grid-template-columns: repeat(4, 2fr);
     }
-    &__web-box:hover {
-        filter: grayscale(0);
-        opacity: 1;
-    }
     &__web-box {
         filter: grayscale(1);
-        width: 286px;
         height: 148px;
         box-sizing: border-box;
         border: 1px solid rgb(243, 242, 240);
         opacity: 0.5;
         transition: $tr;
+    }
+    &__web-box:hover {
+        filter: grayscale(0);
+        opacity: 1;
+        z-index: 1;
     }
     &__web-grid-cntrl {
         padding-top: 30px;
@@ -496,5 +496,33 @@ ul li::before {
     }
     &__web-box:nth-child(7) {
         padding-top: 10px;
+    }
+    &__section__web-logo-container {
+        position: relative;
+        display: inline-block;
+      }
+    &__tooltip {
+        text-align: center;
+        width: 232px;
+        height: 130px;
+        top: 126px;
+        left: 25px;
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 150%;
+        padding-top: 30px;
+        color: $light;
+        position: absolute;
+        visibility: hidden;
+        background-repeat: no-repeat;
+        background-image: url(../images/tooltip-background.svg);
+      }
+      
+    &__web-logo-container:hover &__tooltip {
+        visibility: visible;
+    }
+    &__web-tooltip-txt-plus {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
