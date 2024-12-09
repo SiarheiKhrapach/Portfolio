@@ -726,27 +726,95 @@ ul li::before {
         line-height: 150%;
     }
     &__phone-mail {
-        color: $gray;
+        color: white;
         padding-right: 448px;
         font-size: 12px;
         font-weight: 400;
         line-height: 150%;
         opacity: 0.8;
         margin-top: 60px;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
     }
     &__input-type {
         width: 560px;
         height: 65px;
-        margin-top: 10px;
+        padding: 10px;
+        background-color: #3d3d3d;
+        border: none;
+        color: $light;
+        font-size: 12px;
+        &:focus {
+            outline: none;
+          }
+    }
+    &__connection {
+        color: $gray;
         font-size: 12px;
         font-weight: 400;
         line-height: 150%;
-        background-color: #575554;
-        opacity: 0.3;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        opacity: 0.8;
     }
-    &__input-type::placeholder {
-        padding-left: 20px;
-        color: rgb(255, 255, 255);
+    &__dropdown-container {
+        width: 200px;
+        border-radius: 3px;
+        margin: 40px auto;
+        background: #fff;
+        min-height: 50px;
+        text-align: center;
+        position: relative;
+        ul { list-style-type: none; padding: 0; }
+        label {
+            position: relative;
+            display: block;
+            width: 100%;
+            line-height: 50px;
+            cursor: pointer;
+            background: #446CB3;
+            color: white;
+            user-select: none;
+            padding-right: 10px;
+            &:hover { background: #365690; }
+            &:after {
+                content: "\203A";
+                position: absolute;
+                width: 40px;
+                font-size: 32px;
+                right: 0;
+                padding-left: 0px;
+                top: 0;
+                bottom: 0;
+                transform: rotate(90deg);
+              }    
+        }
+        .section__content {
+            display: flex;
+            flex-direction: column;
+            height: 0;
+            max-height: 0px;    
+            margin: 0;
+            text-align: left;
+            overflow: hidden;
+            transition: 0.3s linear;
+            position: absolute;
+            z-index: 999; 
+            background: #fff;
+            li {
+                padding: 3px 10px;       
+                &:first-child { padding-top: 10px; }
+                &:last-child { padding-bottom: 10px; }      
+            }
+        }
+        #drop {
+            display: none;
+            &:checked ~ .section__content {
+            height: auto;   
+            width: 100%;
+            max-height: 900px;
+            transition: max-height 1s ease-in;    
+            overflow: hidden;
+        }
     }
+}
 }
