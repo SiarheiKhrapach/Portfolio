@@ -757,10 +757,10 @@ ul li::before {
         opacity: 0.8;
     }
     &__dropdown-container {
-        width: 200px;
+        width: 560px;
+        height: 65px;
         border-radius: 3px;
-        margin: 40px auto;
-        background: #fff;
+        margin-top: 10px;
         min-height: 50px;
         text-align: center;
         position: relative;
@@ -771,21 +771,23 @@ ul li::before {
             width: 100%;
             line-height: 50px;
             cursor: pointer;
-            background: #446CB3;
-            color: white;
+            background: #3d3d3d;
+            color: #FFFFFF;
             user-select: none;
-            padding-right: 10px;
-            &:hover { background: #365690; }
+            padding-right: 21px;
+            margin-left: 0px;
+            &:hover { background: #3d3d3d; }
             &:after {
-                content: "\203A";
+                content: " ";
+                background-repeat: no-repeat;
+                background-image: url(../images/objects/arrow-select.svg);
                 position: absolute;
                 width: 40px;
                 font-size: 32px;
                 right: 0;
                 padding-left: 0px;
-                top: 0;
+                top: 20px;
                 bottom: 0;
-                transform: rotate(90deg);
               }    
         }
         .section__content {
@@ -799,21 +801,33 @@ ul li::before {
             transition: 0.3s linear;
             position: absolute;
             z-index: 999; 
-            background: #fff;
+            background: #3d3d3d;
             li {
                 padding: 3px 10px;       
                 &:first-child { padding-top: 10px; }
                 &:last-child { padding-bottom: 10px; }      
             }
+            a {
+                color: #706b6b;
+                padding-bottom: 17px;
+                padding-left: 20px;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 150%;    
+            }
+            :hover {
+                color: $light;
+                transition: $tr;
+            }
         }
         #drop {
             display: none;
             &:checked ~ .section__content {
-            height: auto;   
-            width: 100%;
-            max-height: 900px;
-            transition: max-height 1s ease-in;    
-            overflow: hidden;
+                height: auto;
+                width: 581px;
+                max-height: 900px;
+                transition: max-height 1s ease-in;
+                overflow: hidden;
         }
     }
 }
