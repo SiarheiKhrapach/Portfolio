@@ -394,8 +394,14 @@ ul li::before {
         margin-top: -20px;
         margin-bottom: 0;
     }
-    &__bnr-img {
+    &n__bnr-img-cont {
+        display: block;
         width: 560px;
+        height: 315px;
+    }
+    &__bnr-img {
+        box-sizing: border-box;
+        width: 100%;
         height: 315px;
     }
     &__gradient {
@@ -854,9 +860,11 @@ ul li::before {
 }
 .footer {
     margin-top: 61px;
-    display: flex;
-    justify-content: space-between;
-    
+   
+    &__footer-info-block {
+        display: flex;
+        justify-content: space-between;
+    }
     &__footer-info {
         display: flex;
         gap: 30px;
@@ -902,7 +910,23 @@ ul li::before {
             }
         transition: $tr;
     }
-    &__and-info {
-        margin-top: 38px;
+    &__info-and {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        p {
+            opacity: 0.3;
+            color: rgb(243, 242, 240);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 150%;
+        }
+        a {
+            color: rgb(243, 242, 240);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 150%;
+            text-decoration: underline;
+        }
     }
 }
