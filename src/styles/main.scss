@@ -48,12 +48,18 @@ ul li::before {
     &__link {
         display: flex;
         gap: 27px;
+        @media (max-width: 360px) {
+            margin-left: 10px;
+            margin-right: 10px;
+            display: none;
+        }
     }
     &__nav-link{
         font-family: $font;
         color: $gray;
         transition: $tr;
     }
+
     &__nav-link:hover {
         color: $red;
     }
@@ -63,6 +69,9 @@ ul li::before {
         font-family: $font;
         gap: 25px;
         color: $gray;
+        @media (max-width: 360px) {
+           
+        }
     }
     &__phone {
         font-family: $font;
@@ -77,11 +86,17 @@ ul li::before {
         height: 24px;
         background-color: $gray;
         margin: 0 10px;
+        @media (max-width: 360px) {
+            display: none;
+        }
     }
     &__amail {
         font-family: $font;
         color: $gray;
         transition: $tr;
+        @media (max-width: 360px) {
+            display: none;
+        }
     }
     &__amail:hover {
         color: $red;
@@ -91,9 +106,21 @@ ul li::before {
 .hero {
     max-width: 100%;
     &__banner {
-        max-width: 100%;
-        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -o-object-fit: cover;
+        object-fit: cover;
+        width: 100%;
+        height: 310px;
+    }
+    &__img-bnr {
         padding-top: 62px;
+        width: 100%;
+        height: 310px;
+        position: relative;
+        overflow: hidden;
     }
     &__name {
         color: $gray;
@@ -105,18 +132,30 @@ ul li::before {
         margin: 0;
         z-index: 9999;
         position: relative;
+        @media (max-width: 360px) {
+            padding-top: 60px;
+            font-size: 18px;
+        }
     }
     &__name::before {
         content: "";
         max-width: 100%;
         height: 253px;
-        width: 281px;
+        width: 253px;
         display: block;
         position: absolute;
         z-index: -1;
         left: -152px;
         top: 105px;
-        background-image: url(../images/objects/triangle.png);
+        background-color: $red;
+        border-radius: 100%;
+        @media (max-width: 360px) {
+            top: 23px;
+            height: 180px;
+            width: 180px;
+            left: -96px;
+        }
+       
     }
     &__info {
         color: $gray;
@@ -127,6 +166,9 @@ ul li::before {
         text-transform: uppercase;
         z-index: 9999;
         position: relative;
+        @media (max-width: 360px) {
+            font-size: 28px;
+        }
     }
     &__social-info {
         display: flex;
@@ -138,6 +180,9 @@ ul li::before {
         display: flex;
         align-items: center;
         gap: 15px;
+        @media (max-width: 360px) {
+            padding-top: 70px;
+        }
     }
     &__discussion {
         color: $gray;
@@ -145,6 +190,9 @@ ul li::before {
         font-size: 16px;
         font-weight: 700;
         line-height: 150%;
+        @media (max-width: 360px) {
+            font-size: 12px;
+        }
     }
     &__discussion::after {
         content:"";
@@ -163,6 +211,10 @@ ul li::before {
         gap: 48px;
         position: relative;
         z-index: 9999;
+        @media (max-width: 360px) {
+            padding-top: 70px;
+            gap: 20px;
+        }
     }
     &__social-link {
         color: $gray;
@@ -170,6 +222,10 @@ ul li::before {
         font-weight: 400;
         line-height: 150%;
         position: relative;
+        @media (max-width: 360px) {
+            font-size: 12px;
+           
+        }
     }
     &__social-link:not(:last-child)::after {
         content: "";
@@ -178,6 +234,10 @@ ul li::before {
         height: 24px;
         background-color: $gray;
         margin: 0 24px;
+        @media (max-width: 360px) {
+            margin: 0 10px;
+            height: 20px;
+        }
     }
     &__social-link:hover {
         color: $red;
@@ -190,13 +250,25 @@ ul li::before {
         height: 106px;
         width: 106px;
         z-index: -1;
-        background-image: url(../images/objects/ellipse.png);
+        border-radius: 100%;
+        background-color: $red;
+        @media (max-width: 360px) {
+            width: 60px;
+            height: 60px;
+            left: 28px;
+            top: -21px;
+        }
     }
     &__web {
         margin-top: 45px;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        @media (max-width: 360px) {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+        }
     }
     &__description {
         color: $light;
@@ -212,24 +284,44 @@ ul li::before {
         font-weight: 400;
         line-height: 150%;
         opacity: 0.8;
+        @media (max-width: 360px) {
+            font-size: 10px;
+        }
     }
     &__web-info:nth-child(1) {
         margin-right: 91px;
+        @media (max-width: 360px) {
+            margin-right: 27px;
+        }
     }
     &__web-info:nth-child(2) {
         margin-right: 77px;
+        @media (max-width: 360px) {
+            margin-right: 10px;
+        }
     }
     &__web-info:nth-child(3) {
         margin-right: 57px;
+        @media (max-width: 360px) {
+            padding-top: 30px;
+            margin-right: 10px;
+        }
     }
     &__web-info:nth-child(4) {
         margin-right: 14px;
+        @media (max-width: 360px) {
+            padding-top: 30px;
+            margin-right: -2px;
+        }
     }
     &__description {
         color: $light;
         font-size: 16px;
         font-weight: 700;
         line-height: 150%;
+        @media (max-width: 360px) {
+            font-size: 12px;
+        }
     }
 }
 .article {
@@ -239,6 +331,10 @@ ul li::before {
         margin-top: 180px;
         border-bottom: 1px $gray solid;
         padding-bottom: 60px;
+        @media (max-width: 360px) {
+            margin-top: 80px;
+            flex-direction: column;
+        }
     }
     &__about {
         font-size: 28px;
@@ -247,6 +343,11 @@ ul li::before {
         line-height: 150%;
         text-transform: uppercase;
         margin: 0;
+        @media (max-width: 360px) {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 150%;
+        }
     }
     &__about-text {
         width: 560px;
@@ -257,12 +358,23 @@ ul li::before {
         line-height: 150%;
         margin: 0;
         opacity: 0.8;
+        @media (max-width: 360px) {
+            font-size: 16px;
+            padding-top: 20px;
+            font-weight: 400;
+            line-height: 150%;
+            width: 340px;
+            height: 100%;
+        }
     }
     &__wrap {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row-reverse;
         margin-top: 60px;
+        @media (max-width: 360px) {
+            margin-top: 40px;
+        }
     }
     &__grid-info {
         width: 560px;
@@ -270,6 +382,10 @@ ul li::before {
         display: grid;
         grid-template-columns: repeat(2, 2fr);
         gap: 42px;
+        @media (max-width: 360px) {
+            gap: 25px;
+            height: 244px;
+        }
     }
     &__skills {
         color: $light;
@@ -278,6 +394,9 @@ ul li::before {
         line-height: 150%;
         margin-top: 0;
         margin-bottom: 20px;
+        @media (max-width: 360px) {
+            font-size: 12px;
+        }
     }
     &__skills-info {
         color: $gray;
@@ -286,24 +405,41 @@ ul li::before {
         line-height: 150%;
         margin: 0;
         opacity: 0.8;
+        @media (max-width: 360px) {
+            font-size: 10px;
+        }
     }
     &__grid-details {
         display: grid;
         align-items: center;
         grid-template-columns: repeat(1, 1fr);
         margin-top: 180px;
+        @media (max-width: 360px) {
+            margin-top: 60px;
+        }
     }
     &__grid-vertical {
         border-top: 1px $light solid;
         display: flex;
         align-items: center;
         gap: 217px;
+        @media (max-width: 360px) {
+            width: 340px;
+            height: 84px;
+            gap: 27px;
+        }
         }
         &__grid-vertical:nth-child(2) {
             gap: 198px;
+            @media (max-width: 360px) {
+                gap: 20px;
+            }
         }
         &__grid-vertical:nth-child(3) {
             gap: 164px;
+            @media (max-width: 360px) {
+                gap: 20px;
+            }
         }
         &__grid-vertical:last-child {
             border-bottom: 1px $gray solid;
@@ -311,13 +447,21 @@ ul li::before {
     &__number-stage {
         display: flex;
         gap: 43px;
+        @media (max-width: 360px) {
+            gap: 12px;
+        }
     }
     &__number {
         color: $gray;
         margin-top: 30px;
         font-size: 28px;
         font-weight: 400;
-        line-height: 150%; 
+        line-height: 150%;
+        @media (max-width: 360px) {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+        }
     }    
     &__stage {
         color: $gray;
@@ -325,6 +469,13 @@ ul li::before {
         font-size: 28px;
         font-weight: 400;
         line-height: 150%;
+        @media (max-width: 360px) {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+            width: 156px;
+            height: 56px;
+        }
     }
     &__stage-text {
         color: $gray;
@@ -332,6 +483,12 @@ ul li::before {
         font-weight: 400;
         line-height: 150%;
         opacity: 0.8;
+        @media (max-width: 360px) {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 150%;
+            width: 138px;
+        }
     }
 }
 
@@ -345,6 +502,12 @@ ul li::before {
         font-size: 74px;
         font-weight: 700;
         text-transform: uppercase;
+        @media (max-width: 360px) {
+            margin-top: 80px;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 34px;
+        }
     }
     &__red-circle::before {
         content: '';
@@ -357,6 +520,12 @@ ul li::before {
         background-color: $red;
         z-index: -1;
         position: absolute;
+        @media (max-width: 360px) {
+            top: 116px;
+            right: 1px;
+            width: 197px;
+            height: 197px;
+        }
     }
     &__portfolio-link {
         display: flex;
@@ -364,11 +533,19 @@ ul li::before {
         margin-top: 244px;
         padding-bottom: 58px;
         border-bottom: 1px solid $gray ;
+        @media (max-width: 360px) {
+            padding-bottom: 40px;
+            margin-top: 88px;
+            flex-direction: column;
+         }
     }
     &__portfolio-link-txt {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        @media (max-width: 360px) {
+            gap: 20px;
+        }
     }
     &__name-project {
         color: $light;
@@ -376,6 +553,11 @@ ul li::before {
         font-weight: 700;
         line-height: 150%;
         margin-bottom: 0;
+        @media (max-width: 360px) {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 150%;
+         }
     }
     &__description-project {
         padding: 0;
@@ -384,6 +566,13 @@ ul li::before {
         font-weight: 400;
         line-height: 150%;
         opacity: 0.8;
+        li {
+            @media (max-width: 360px) {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 150%;
+            }
+        }
     }
     &__hours {
         color: $gray;
@@ -393,6 +582,12 @@ ul li::before {
         opacity: 0.8;
         margin-top: -20px;
         margin-bottom: 0;
+        @media (max-width: 360px) {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 150%;
+            margin-bottom: 43px;
+        }
     }
     &n__bnr-img-cont {
         display: block;
@@ -403,6 +598,9 @@ ul li::before {
         box-sizing: border-box;
         width: 100%;
         height: 315px;
+        @media (max-width: 360px) {
+            height: 190px;
+        }
     }
     &__gradient {
         left: 0;
@@ -412,9 +610,16 @@ ul li::before {
         height: 871px;
         background: linear-gradient(180deg, rgb(20, 20, 22), rgba(20, 20, 22, 0) 100%);
         z-index: -2;
+        @media (max-width: 360px) {
+           margin-top: 43px;
+        }
+        
     }
     &__portfolio-link:nth-child(2) {
         margin-top: 60px;
+        @media (max-width: 360px) {
+            margin-top: 40px;
+         }
     }
     &__myself-txt {
         display: block;
@@ -427,10 +632,23 @@ ul li::before {
         padding-bottom: 80px;
         padding-right: 270px;
         margin-bottom: 0;
+        @media (max-width: 360px) {
+            width: 340px;
+            height: 120px;
+            margin-top: 80px;
+            padding-bottom: 40px;
+            padding-right: 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 150%;
+         }
     }
     &__grid-container {
         display: grid;
-        grid-template-columns: repeat(3, 6fr);;
+        grid-template-columns: repeat(3, 6fr);
+        @media (max-width: 360px) {
+            grid-template-columns: repeat(1, 6fr);
+         }
     }
     &__grid-box {
         margin-top: 80px;
@@ -439,6 +657,9 @@ ul li::before {
         gap: 40px;
         width: 294px;
         height: 71px;
+        @media (max-width: 360px) {
+            margin-top: 40px;
+         }
     }
     &__grid-txt {
         color: $light;
@@ -446,6 +667,11 @@ ul li::before {
         font-weight: 600;
         line-height: 19px;
         margin-top: 0;
+        @media (max-width: 360px) {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 15px;
+         }
     }
     &__grid-txt-discription {
         color: $gray;
@@ -456,6 +682,12 @@ ul li::before {
         margin: 0;
         width: 214px;
         height: 42px;
+        @media (max-width: 360px) {
+            font-size: 12px;
+            width: 220px;
+            font-weight: 400;
+            line-height: 150%;
+         }
     }
     &__grid-box:nth-child(2) &__grid-discription p {
         width: 227px;
@@ -475,6 +707,9 @@ ul li::before {
         margin-top: 180px;
         display: grid;
         grid-template-columns: repeat(4, 2fr);
+        @media (max-width: 360px) {
+            margin-top: 60px;
+         }
     }
     &__web-box {
         filter: grayscale(1);
@@ -483,6 +718,11 @@ ul li::before {
         border: 1px solid rgb(243, 242, 240);
         opacity: 0.5;
         transition: $tr;
+        position: relative;
+        @media (max-width: 360px) {
+            padding-left: 26%;
+            height: 44px;
+         }
     }
     &__web-box:hover {
         filter: grayscale(0);
@@ -490,19 +730,20 @@ ul li::before {
         z-index: 1;
     }
     &__web-grid-cntrl {
-        padding-top: 30px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        height: 100%;
+        @media (max-width: 360px) {
+            img {
+                width: 40%;
+                height: auto;
+                padding-left: 10%;
+                padding-top: 10%;
+            }
+         }
     }
-    &__web-box:nth-child(5) {
-        padding-top: 10px;
-    }
-    &__web-box:nth-child(6) {
-        padding-top: 15px;
-    }
-    &__web-box:nth-child(7) {
-        padding-top: 10px;
-    }
+    
     &__section__web-logo-container {
         position: relative;
         display: inline-block;
@@ -522,6 +763,9 @@ ul li::before {
         visibility: hidden;
         background-repeat: no-repeat;
         background-image: url(../images/tooltip-background.svg);
+        @media (max-width: 360px) {
+            display: none;
+         }
       }
       
     &__web-logo-container:hover &__tooltip {
@@ -539,6 +783,11 @@ ul li::before {
         justify-content: space-between;
         border-bottom: 1px solid $gray;
         padding-bottom: 80px;
+        @media (max-width: 360px) {
+            flex-direction: column;
+            margin-top: 80px;
+            padding-bottom: 30px;
+         }
     }
     &__tarrif {
         color: $light;
@@ -546,6 +795,11 @@ ul li::before {
         font-weight: 700;
         line-height: 150%;
         position: relative;
+        @media (max-width: 360px) {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 150%;
+         }
     }
     &__tarrif-alepce::after {
         content: "";
@@ -557,6 +811,12 @@ ul li::before {
         background-color: #D40000;
         border-radius: 100%;
         z-index: -1;
+        @media (max-width: 360px) {
+            width: 138px;
+            height: 138px;
+            left: -88px;
+            top: -55px;
+         }
     }
     &__tariff-info {
         color: $light;
@@ -566,6 +826,24 @@ ul li::before {
         width: 559px;
         height: 168px;
         opacity: 0.8;
+        @media (max-width: 360px) {
+            margin: 0;
+            font-size: 16px;
+            width: 340px;
+            height: 96px;
+         }
+    }
+    &__development-arrow-txt-info {
+        @media (max-width: 360px) {
+            width: 166px;
+            height: 170px;
+         }
+    }
+    &__development-container:nth-child(3) p {
+        width: 120px;
+    }
+    &__development-container:nth-child(4) &__seven {
+        margin-top: 0;
     }
     &__development-container {
         margin-top: 60px;
@@ -573,6 +851,11 @@ ul li::before {
         gap: 224px;
         padding-bottom: 75px;
         border-bottom: 1px solid $gray;
+        @media (max-width: 360px) {
+            gap: 25px;
+            margin-top: 40px;
+            padding-bottom: 35px;
+         }
     }
     &__development-txt {
         color: $gray;
@@ -580,6 +863,14 @@ ul li::before {
         font-weight: 400;
         line-height: 150%;
         margin: 0;
+        @media (max-width: 360px) {
+            font-size: 16px;
+            font-size: 16px;
+            width: 112px;
+            height: 72px;
+            font-weight: 400;
+            line-height: 150%;
+         }
     }
     &__development-paragraph {
         color: $gray;
@@ -589,6 +880,13 @@ ul li::before {
         margin-top: 20px;
         margin-bottom: 70px;
         opacity: 0.8;
+        @media (max-width: 360px) {
+            width: 89px;
+            margin-bottom: 15px;
+            font-size: 10px;
+            font-weight: 500;
+            line-height: 150%;
+         }
     }
     &__development-discussion {
         color: $gray;
@@ -596,6 +894,12 @@ ul li::before {
         font-weight: 700;
         line-height: 150%;
         display: block;
+        @media (max-width: 360px) {
+            width: 106px;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 150%;
+         }
     }
     &__development-discussion::after {
         content:"";
@@ -612,6 +916,14 @@ ul li::before {
         display: flex;
         align-items: center;
         gap: 15px;
+        @media (max-width: 360px) {
+            gap: 5px;
+         }
+    }
+    &__development-included {
+        @media (max-width: 360px) {
+            height: 170px;
+         }
     }
     &__development-txt-inc {
         color: $gray;
@@ -620,6 +932,11 @@ ul li::before {
         line-height: 150%;
         opacity: 0.8;
         margin: 0;
+        @media (max-width: 360px) {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 150%;
+         }
     }
     &__development-info {
         color: $gray;
@@ -627,6 +944,16 @@ ul li::before {
         font-weight: 400;
         line-height: 200%;
         opacity: 0.8;
+        @media (max-width: 360px) {
+            padding: 0;
+            li {
+                margin-bottom: 5px;
+                padding: 0;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 200%;
+            }
+         }
     }
     &__development-info li::before {
         content: "• ";
@@ -639,6 +966,12 @@ ul li::before {
         line-height: 150%;
         margin-top: 40px;
         margin-bottom: 0;
+        @media (max-width: 360px) {
+            margin-top: 26px;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 150%;
+         }
     }
     &__elipse-seven {
         left: -47px;
@@ -650,6 +983,12 @@ ul li::before {
         background-color: $red;
         border-radius: 100%;
         z-index: -1;
+        @media (max-width: 360px) {
+            width: 40px;
+            height: 40px;
+            left: -19px;
+            top: -5px;
+         }
     }
     &__development-container:nth-child(4) {
         border-bottom: none;
