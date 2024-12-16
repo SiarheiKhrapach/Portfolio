@@ -399,6 +399,9 @@ ul li::before {
         line-height: 150%;
         text-transform: uppercase;
         margin: 0;
+        @media (max-width: 860px) {
+            font-size: clamp(16px, 1.5vw + 0.5rem, 24px);
+        }
         @media (max-width: 360px) {
             font-size: 16px;
             font-weight: 700;
@@ -414,6 +417,11 @@ ul li::before {
         line-height: 150%;
         margin: 0;
         opacity: 0.8;
+        @media (max-width: 670px) {
+            width: clamp(340px, 1.5vw + 0.5rem, 560px);
+            height: clamp(96px, 1.5vw + 0.5rem, 168px);
+            font-size: clamp(16px, 1.5vw + 0.5rem, 28px);
+        }
         @media (max-width: 360px) {
             font-size: 16px;
             padding-top: 20px;
@@ -479,6 +487,9 @@ ul li::before {
         display: flex;
         align-items: center;
         gap: 217px;
+        @media (max-width: 790px) {
+            gap: clamp(10px, 1vw + 0.5rem, 217px);
+        }
         @media (max-width: 360px) {
             width: 340px;
             height: 84px;
@@ -487,12 +498,18 @@ ul li::before {
         }
         &__grid-vertical:nth-child(2) {
             gap: 198px;
+            @media (max-width: 790px) {
+                gap: clamp(10px, 1vw + 0.5rem, 217px);
+            }
             @media (max-width: 360px) {
                 gap: 20px;
             }
         }
         &__grid-vertical:nth-child(3) {
             gap: 164px;
+            @media (max-width: 790px) {
+                gap: clamp(10px, 1vw + 0.5rem, 217px);
+            }
             @media (max-width: 360px) {
                 gap: 20px;
             }
@@ -503,6 +520,9 @@ ul li::before {
     &__number-stage {
         display: flex;
         gap: 43px;
+        @media (max-width: 790px) {
+            gap: clamp(12px, 2vw + 0.5rem, 43px);
+        }
         @media (max-width: 360px) {
             gap: 12px;
         }
@@ -513,6 +533,9 @@ ul li::before {
         font-size: 28px;
         font-weight: 400;
         line-height: 150%;
+        @media (max-width: 790px) {
+            font-size: clamp(16px, 2vw + 0.5rem, 28px);
+        }
         @media (max-width: 360px) {
             font-size: 16px;
             font-weight: 400;
@@ -525,6 +548,9 @@ ul li::before {
         font-size: 28px;
         font-weight: 400;
         line-height: 150%;
+        @media (max-width: 790px) {
+            font-size: clamp(16px, 2vw + 0.5rem, 28px);
+        }
         @media (max-width: 360px) {
             font-size: 16px;
             font-weight: 400;
@@ -558,6 +584,9 @@ ul li::before {
         font-size: 74px;
         font-weight: 700;
         text-transform: uppercase;
+        @media (max-width: 1200px) {
+            font-size: clamp(28px, 2vw + 2rem, 74px);
+        }
         @media (max-width: 360px) {
             margin-top: 80px;
             font-size: 28px;
@@ -576,6 +605,11 @@ ul li::before {
         background-color: $red;
         z-index: -1;
         position: absolute;
+        @media (max-width: 1200px) {
+            
+            margin-left: 217px;
+            margin-top: -75px;
+        }
         @media (max-width: 360px) {
             top: 116px;
             right: 1px;
