@@ -391,6 +391,9 @@ ul li::before {
             margin-top: 80px;
             flex-direction: column;
         }
+        @media (max-width: 650px) {
+            gap: 20px;
+        }
     }
     &__about {
         font-size: 28px;
@@ -594,7 +597,7 @@ ul li::before {
             line-height: 34px;
         }
     }
-    &__red-circle::before {
+    &__red-circle::after {
         content: '';
         width: 465px;
         height: 465px;
@@ -606,9 +609,13 @@ ul li::before {
         z-index: -1;
         position: absolute;
         @media (max-width: 1200px) {
-            
+            width: clamp(350px, 3vw + 0.5rem, 465px);
+            height: clamp(350px, 3vw + 0.5rem, 465px);
             margin-left: 217px;
-            margin-top: -75px;
+            margin-top: clamp(-132px, 2vw + 2rem, -159px);
+        }
+        @media (max-width: 550px) {
+            margin-left: 180px
         }
         @media (max-width: 360px) {
             top: 116px;
@@ -623,7 +630,10 @@ ul li::before {
         margin-top: 244px;
         padding-bottom: 58px;
         border-bottom: 1px solid $gray ;
-        @media (max-width: 360px) {
+        @media (max-width: 855px) {
+            gap: 20px;
+         }
+        @media (max-width: 700px) {
             padding-bottom: 40px;
             margin-top: 88px;
             flex-direction: column;
@@ -643,6 +653,9 @@ ul li::before {
         font-weight: 700;
         line-height: 150%;
         margin-bottom: 0;
+        @media (max-width: 855px) {
+            font-size: clamp(16px, 1vw + 0.8rem, 28px);
+         }
         @media (max-width: 360px) {
             font-size: 16px;
             font-weight: 700;
@@ -657,6 +670,9 @@ ul li::before {
         line-height: 150%;
         opacity: 0.8;
         li {
+            @media (max-width: 855px) {
+                font-size: clamp(12px, 0.5vw + 0.8rem, 16px);
+             }
             @media (max-width: 360px) {
                 font-size: 12px;
                 font-weight: 400;
@@ -672,6 +688,9 @@ ul li::before {
         opacity: 0.8;
         margin-top: -20px;
         margin-bottom: 0;
+        @media (max-width: 775px) {
+            font-size: clamp(12px, 1vw + 0.5rem, 16px);
+        }
         @media (max-width: 360px) {
             font-size: 12px;
             font-weight: 700;
@@ -688,6 +707,12 @@ ul li::before {
         box-sizing: border-box;
         width: 100%;
         height: 315px;
+        @media (max-width: 855px) {
+            height: clamp(255px, 0.5vw + 0.8rem, 261px);
+         }
+         @media (max-width: 700px) {
+            height: clamp(220px, 30%, 450px);
+         }
         @media (max-width: 360px) {
             height: 190px;
         }
@@ -722,6 +747,11 @@ ul li::before {
         padding-bottom: 80px;
         padding-right: 270px;
         margin-bottom: 0;
+        @media (max-width: 1120px) {
+            padding-right: 0;
+            margin-top: 85px;
+            font-size: clamp(20px, 2vw + 0.5rem, 28px);
+        }
         @media (max-width: 360px) {
             width: 340px;
             height: 120px;
@@ -736,7 +766,13 @@ ul li::before {
     &__grid-container {
         display: grid;
         grid-template-columns: repeat(3, 6fr);
-        @media (max-width: 360px) {
+        @media (max-width: 1000px) {
+            grid-template-columns: repeat(2, 6fr);
+         }
+        @media (max-width: 980px) {
+            gap: clamp(15px, 1vw + 0.5rem, 40px);
+         }
+        @media (max-width: 675px) {
             grid-template-columns: repeat(1, 6fr);
          }
     }
@@ -809,6 +845,9 @@ ul li::before {
         opacity: 0.5;
         transition: $tr;
         position: relative;
+        @media (max-width: 1160px) {
+            height: clamp(44px, 100%, 148px); 
+         }
         @media (max-width: 360px) {
             padding-left: 26%;
             height: 44px;
@@ -824,6 +863,11 @@ ul li::before {
         justify-content: center;
         align-items: center;
         height: 100%;
+        @media (max-width: 1160px) {
+            img {
+                height: clamp(44px, 2.5vw, 84px);
+            }
+         }
         @media (max-width: 360px) {
             img {
                 width: 40%;
@@ -853,6 +897,9 @@ ul li::before {
         visibility: hidden;
         background-repeat: no-repeat;
         background-image: url(../images/tooltip-background.svg);
+        @media (max-width: 1160px) {
+            display: none;
+         }
         @media (max-width: 360px) {
             display: none;
          }
