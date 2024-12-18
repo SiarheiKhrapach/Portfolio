@@ -920,10 +920,9 @@ ul li::before {
         justify-content: space-between;
         border-bottom: 1px solid $gray;
         padding-bottom: 80px;
-        @media (max-width: 360px) {
-            flex-direction: column;
-            margin-top: 80px;
-            padding-bottom: 30px;
+        @media (max-width: 730px) {
+            gap: 50px;
+           margin-top: 120px;
          }
     }
     &__tarrif {
@@ -963,6 +962,9 @@ ul li::before {
         width: 559px;
         height: 168px;
         opacity: 0.8;
+        @media (max-width: 750px) {
+            font-size: clamp(16px, 3vw + 0.5rem, 28px);
+         }
         @media (max-width: 360px) {
             margin: 0;
             font-size: 16px;
@@ -976,6 +978,9 @@ ul li::before {
         gap: 224px;
         padding-bottom: 75px;
         border-bottom: 1px solid $gray;
+        @media (max-width: 850px) {
+            gap: clamp(25px, 2.5vw + 0.5rem, 224px);
+         }
         @media (max-width: 360px) {
             gap: 25px;
             margin-top: 40px;
@@ -1113,6 +1118,9 @@ ul li::before {
         line-height: 150%;
         margin-top: 40px;
         margin-bottom: 0;
+        @media (max-width: 580px) {
+            font-size: clamp(22px, 3vw + 0.9rem, 42px);
+         }
         @media (max-width: 360px) {
             margin-top: 26px;
             font-size: 22px;
@@ -1149,6 +1157,10 @@ ul li::before {
         position: relative;
         border-bottom: 1px solid $gray;
         padding-bottom: 45px;
+        @media (max-width: 860px) {
+            margin-top: 60px;
+            gap: 20px;
+         }
         @media (max-width: 360px) {
             flex-direction: column;
             margin-top: 15px;
@@ -1164,6 +1176,9 @@ ul li::before {
         font-weight: 700;
         line-height: 150%;
         text-transform: uppercase;
+        @media (max-width: 860px) {
+            font-size: clamp(16px, 1.5vw + 0.9rem, 28px);
+         }
         @media (max-width: 360px) {
             width: 163px;
             height: 48px;
@@ -1199,6 +1214,9 @@ ul li::before {
         line-height: 150%;
         opacity: 0.8;
         margin-right: 77px;
+        @media (max-width: 700px) {
+            font-size: clamp(16px, 0.5vw + 0.5rem, 28px);
+         }
         @media (max-width: 360px) {
             width: 276px;
             height: 96px;
@@ -1295,6 +1313,15 @@ ul li::before {
         &:focus {
             outline: none;
           }
+          @media (max-width: 1000px) {
+            width: 500px
+         }
+         @media (max-width: 760px) {
+            width: 400px;
+         }
+         @media (max-width: 575px) {
+            width: 250px;
+         }
           @media (max-width: 360px) {
             width: 320px;
             height: 55px;
@@ -1345,6 +1372,19 @@ ul li::before {
                 top: 28px;
                 bottom: 0;
               }
+              @media (max-width: 360px) {
+                width: 320px;
+                height: 55px;
+             }
+             @media (max-width: 1000px) {
+                width: 500px
+             }
+             @media (max-width: 760px) {
+                width: 400px;
+             }
+             @media (max-width: 575px) {
+                width: 250px;
+             }
               @media (max-width: 360px) {
                 width: 320px;
                 height: 55px;
@@ -1412,6 +1452,19 @@ ul li::before {
                 width: 340px;
                 height: 55px;
              }
+             @media (max-width: 1000px) {
+                width: 522px
+             }
+             @media (max-width: 760px) {
+                width: 420px;
+             }
+             @media (max-width: 575px) {
+                width: 272px;
+             }
+              @media (max-width: 360px) {
+                width: 320px;
+                height: 55px;
+             }
         }
 }
 .footer {
@@ -1420,7 +1473,7 @@ ul li::before {
     &__footer-info-block {
         display: flex;
         justify-content: space-between;
-        @media (max-width: 360px) {
+        @media (max-width: 750px) {
             flex-direction: column-reverse;
             align-items: center;
          }
@@ -1430,6 +1483,13 @@ ul li::before {
         gap: 30px;
         @media (max-width: 360px) {
             gap: 18px;
+         }
+         @media (max-width: 900px) {
+            gap: clamp(0.333rem, 2vw - 2rem, 0.667rem);
+         }
+         @media (max-width: 860px) {
+            font-size: clamp(10px, 3vw - 0.5rem, 14px);
+             gap: clamp(10px, 3vw - 0.5rem, 30px);
          }
     }
     &__footer-link {
