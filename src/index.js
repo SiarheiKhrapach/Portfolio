@@ -2,10 +2,10 @@ import './styles/main.scss';
 
 // Menu
 
-function openModal() {
+window.openModal = function () {
     document.getElementById("modal").style.top = "0px";
-}
+  };
 
-function closeModal() {
+  window.closeModal = function () {
     document.getElementById("modal").style.top = "-650px";
-}
+  };
