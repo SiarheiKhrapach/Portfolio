@@ -10,11 +10,11 @@
         <div class="container">
             <div class="header">
                 <div class="header__link">
-                    <a href="#" class="header__nav-link">Обо мне</a>
-                    <a href="#" class="header__nav-link">Портфолио</a>
-                    <a href="#" class="header__nav-link">Этапы работ</a>
-                    <a href="#" class="header__nav-link">Цены</a>
-                    <a href="#" class="header__nav-link">Обратная связь</a>
+                    <a href="#about" class="header__nav-link">Обо мне</a>
+                    <a href="#portfolio" class="header__nav-link">Портфолио</a>
+                    <a href="#details" class="header__nav-link">Этапы работ</a>
+                    <a href="#price" class="header__nav-link">Цены</a>
+                    <a href="#feed-back" class="header__nav-link">Обратная связь</a>
                 </div>
                 <div class="header__contact-link">
                     <a href="#" class="header__phone">8 923 777-77-77</a>
@@ -64,7 +64,7 @@
         </div>
     </main>
     <article>
-        <article class="container">
+        <article class="container" id="about">
             <div class="article__about-info">
                 <h2 class="article__about">Обо&nbsp;мне</h2>
                 <p class="article__about-text">Создаю только эффективные решения, которые работают на результат: от одностраничных сайтов, до крупных интернет-порталов.</p>
@@ -91,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="article__grid-details">
+            <div class="article__grid-details" id="details">
                 <div class="article__grid-vertical">
                     <div class="article__number-stage">
                         <p class="article__number">01</p>
@@ -122,7 +122,7 @@
             </div>
         </div>
     </article>
-    <section>
+    <section id="portfolio">
         <div class="container">
             <div class="section__section-portfolio">
                 <h1 class="section__portfolio-txt">Портфолио <span class="section__red-circle"></span></h1>
@@ -272,7 +272,7 @@
                 <h2 class="section__tarrif">Тарифы<span class="section__tarrif-alepce"></span></h2>
                 <p class="section__tariff-info">Представленные ниже цены зависят<br> не только от того какой сайт вы хотите. Конечная цена будет озвучена после прочтения Вашего ТЗ</p>
             </div>
-            <div class="section__development-container">
+            <div class="section__development-container" id="price">
                 <div class="section__development-arrow-txt-info">
                     <h2 class="section__development-txt">Разработка<br>лэндинга или сайт визитки</h2>
                     <p class="section__development-paragraph">Небольшой сайт состоящий из одной страницы</p>
@@ -334,7 +334,7 @@
     </section>
     <section>
         <div class="container">
-            <div class="section__grid-my-project">
+            <div class="section__grid-my-project" id="feed-back">
                 <h2 class="section__my-project">Расскажите <br>о своем проекте<span class="section__circle-tringle"></span></h2>
                 <p class="section__my-project-txt">Воспользуйтесь формой обратной связи, чтобы обсудить ваш проект, заполните все поля, и я свяжусь с вами в ближайшее время</p>
                 <div class="section__social-section">
@@ -366,11 +366,11 @@
         <section class="footer">
             <div class="footer__footer-info-block">
                 <div class="footer__footer-info">
-                    <a href="#" class="footer__footer-link">Обо мне</a>
-                    <a href="#" class="footer__footer-link">Портфолио</a>
-                    <a href="#" class="footer__footer-link">Этапы работ</a>
-                    <a href="#" class="footer__footer-link">Цены</a>
-                    <a href="#" class="footer__footer-link">Обратная связь</a>
+                    <a href="#about" class="footer__footer-link">Обо мне</a>
+                    <a href="#portfolio" class="footer__footer-link">Портфолио</a>
+                    <a href="#details" class="footer__footer-link">Этапы работ</a>
+                    <a href="#price" class="footer__footer-link">Цены</a>
+                    <a href="#feed-back" class="footer__footer-link">Обратная связь</a>
                 </div>
                 <div class="footer__footer-contact">
                     <a href="#" class="footer__phone-link">8 923 777-77-77</a>
@@ -386,27 +386,28 @@
     </div>
     <div class="header__modal" id="modal">
         <div class="header__link-modal">
-            <a href="#" class="header__nav-link-modal">Обо мне</a>
-            <a href="#" class="header__nav-link-modal">Портфолио</a>
-            <a href="#" class="header__nav-link-modal">Этапы работ</a>
-            <a href="#" class="header__nav-link-modal">Цены</a>
-            <a href="#" class="header__nav-link-modal">Обратная связь</a>
+            <a href="#about" class="header__nav-link-modal">Обо мне</a>
+            <a href="#portfolio" class="header__nav-link-modal">Портфолио</a>
+            <a href="#details" class="header__nav-link-modal">Этапы работ</a>
+            <a href="#price" class="header__nav-link-modal">Цены</a>
+            <a href="#feed-back" class="header__nav-link-modal">Обратная связь</a>
         </div>
-        <div class="footer-header">
-            <div class="footer-header__footer-info">
-                <div class="footer__footer-contact">
-                    <a href="#" class="footer__phone-link">8 923 777-77-77</a>
-                    <span class="footer__footer-seporator"></span>
-                    <a href="#" class="footer__footer-mail">alexdev@gmail.com</a>
+        <div class="footer__modal-link">
+            <div class="footer__footer-modal-info">
+                <div class="footer__modal-contact">
+                    <a href="#" class="footer__modal-phone-link">8 923 777-77-77</a>
+                    <span class="footer__footer-modal-seporator"></span>
+                    <a href="#" class="footer__footer-modal-mail">alexdev@gmail.com</a>
                 </div>
-                <div class="section__social-section">
-                    <a href="#" class="section__social-link">Vk</a>
-                    <a href="#" class="section__social-link">Youtube</a>
-                    <a href="#" class="section__social-link">Linkedin</a>
+                <div class="footer__modal-social-section">
+                    <a href="#" class="footer__modal-social-link">Vk</a>
+                    <a href="#" class="footer__modal-social-link">Youtube</a>
+                    <a href="#" class="footer__modal-social-link">Linkedin</a>
                 </div>
             </div>
         </div>
         <button class="header__modal-close" onclick="closeModal()"></button>
+        <div class="footer__background"></div>
     </div>
 </body>
 </html>
